@@ -2,17 +2,17 @@ require 'random_data'
 
 #create posts
 50.times do
-  post.create!(
+  Post.create!(
     title: RandomData.random_sentence,
     body: RandomData.random_paragraph
   )
 end
-posts = Posts.all
+posts = Post.all
 
 #Create comments
 100.times do
   Comment.create!(
-    post: post.sample,
+    post: posts.sample,
     body: RandomData.random_paragraph
   )
 end
