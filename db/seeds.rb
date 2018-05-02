@@ -16,6 +16,11 @@ posts = Post.all
     body: RandomData.random_paragraph
   )
 end
+comments = Comment.all
+
+posts.find_or_create_by(title: "this is a unique post", body: "this is a unique post body")
+
+comments.find_or_create_by(post_id: "101", body: "this is a unique body")
 
 puts "Seed finished"
 puts "#{Post.count} posts created"
