@@ -15,3 +15,5 @@
 //= require bootstrap-sprockets
 //= requiire bootstrap
 //= require_tree .
+@import "bootstrap-sprockets";
+@import "bootstrap";
